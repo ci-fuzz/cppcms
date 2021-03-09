@@ -1,0 +1,57 @@
+{
+  "name": "projects/cppcms-35da6fee",
+  "displayName": "cppcms",
+  "buildScriptContent": "#!/bin/bash -eu\nmkdir build\ncd build\ncmake -DCMAKE_TESTING_ENABLED=OFF -DDISABLE_SHARED=ON -DDISABLE_GCRYPT=ON -DDISABLE_OPENSSL=ON -DDISABLE_FCGI=ON -DDISABLE_SCGI=ON -DDISABLE_HTTP=ON -DDISABLE_CACHE=ON -DDISABLE_TCPCACHE=ON -DDISABLE_GZIP=ON ..\nmake -j$(nproc)",
+  "details": {
+    "javaDetails": {
+      "packages": [
+        "com",
+        "com.cppcms",
+        "com.cppcms.session"
+      ]
+    },
+    "buildSystem": "CMAKE",
+    "javaWebAppDetails": {
+      "projectExceptionPolicy": {
+        "policy": [
+          {
+            "enabled": true,
+            "responsePolicy": {
+              "responseMatcher": "CODE_STARTS_WITH",
+              "code": 2
+            }
+          },
+          {
+            "enabled": true,
+            "responsePolicy": {
+              "responseMatcher": "CODE_STARTS_WITH",
+              "code": 4
+            }
+          },
+          {
+            "enabled": true,
+            "responsePolicy": {
+              "code": 302
+            }
+          },
+          {
+            "enabled": true,
+            "exceptionPolicy": {
+              "Exception": "java.lang.IllegalArgumentException",
+              "exceptionStrategy": "STACKTRACE_CONTAINS",
+              "content": "org.springframework.web.util.UriComponentsBuilder"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "projectEnvironment": {
+    "dockerBuild": {
+      "name": "gcr.io/code-intelligence/builders:cppcms"
+    },
+    "dockerRun": {
+      "name": "gcr.io/code-intelligence/builders:cppcms"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "ci-20892f3f",
+  "displayName": "ci",
+  "maxRunTime": "600s",
+  "fuzzTargets": [
+    "fuzz_json.cpp-dc9b95b8"
+  ],
+  "fuzzerRunConfigurations": [
+    {
+      "engine": "LIBFUZZER",
+      "sanitizer": "ADDRESS",
+      "numberOfJobs": 1
+    }
+  ],
+  "configuredTargets": [
+    {
+      "fuzzTarget": "fuzz_json.cpp-dc9b95b8",
+      "fuzzerRunConfigurations": [
+        {
+          "engine": "LIBFUZZER",
+          "sanitizer": "ADDRESS",
+          "numberOfJobs": 1
+        }
+      ]
+    }
+  ]
+}

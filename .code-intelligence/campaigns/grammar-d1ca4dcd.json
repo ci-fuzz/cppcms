@@ -1,0 +1,15 @@
+{
+  "name": "grammar-d1ca4dcd",
+  "displayName": "grammar",
+  "maxRunTime": "600s",
+  "fuzzTargets": [
+    "fuzz_json_grammar.cpp-d67b8606"
+  ],
+  "fuzzerRunConfigurations": [
+    {
+      "engine": "LIBFUZZER",
+      "sanitizer": "ADDRESS",
+      "numberOfJobs": 1
+    }
+  ]
+}

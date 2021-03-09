@@ -1,0 +1,27 @@
+{
+  "name": "default_campaign-e5e8c022",
+  "displayName": "default_campaign",
+  "maxRunTime": "60s",
+  "fuzzTargets": [
+    "fuzz_json.cpp-dc9b95b8"
+  ],
+  "fuzzerRunConfigurations": [
+    {
+      "engine": "LIBFUZZER",
+      "sanitizer": "ADDRESS",
+      "numberOfJobs": 1
+    }
+  ],
+  "configuredTargets": [
+    {
+      "fuzzTarget": "fuzz_json.cpp-dc9b95b8",
+      "fuzzerRunConfigurations": [
+        {
+          "engine": "LIBFUZZER",
+          "sanitizer": "ADDRESS",
+          "numberOfJobs": 1
+        }
+      ]
+    }
+  ]
+}
