@@ -1,7 +1,7 @@
 {
   "name": "ci-20892f3f",
   "displayName": "ci",
-  "maxRunTime": "600s",
+  "maxRunTime": "18000s",
   "fuzzTargets": [
     "fuzz_json.cpp-dc9b95b8"
   ],
@@ -9,18 +9,9 @@
     {
       "engine": "LIBFUZZER",
       "sanitizer": "ADDRESS",
-      "numberOfJobs": 1
-    }
-  ],
-  "configuredTargets": [
-    {
-      "fuzzTarget": "fuzz_json.cpp-dc9b95b8",
-      "fuzzerRunConfigurations": [
-        {
-          "engine": "LIBFUZZER",
-          "sanitizer": "ADDRESS",
-          "numberOfJobs": 1
-        }
+      "numberOfJobs": 1,
+      "engineArguments": [
+        "-use_value_profile=1"
       ]
     }
   ]
