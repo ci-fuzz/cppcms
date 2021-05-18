@@ -3,7 +3,7 @@
   "displayName": "default_campaign",
   "maxRunTime": "60s",
   "fuzzTargets": [
-    "fuzz_json.cpp-dc9b95b8"
+    "LmNvZGUtaW50ZWxsaWdlbmNlL2Z1enpfdGFyZ2V0cy9mdXp6X2pzb24uY3Bw"
   ],
   "fuzzerRunConfigurations": [
     {

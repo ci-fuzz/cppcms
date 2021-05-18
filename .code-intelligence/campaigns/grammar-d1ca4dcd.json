@@ -3,7 +3,7 @@
   "displayName": "grammar",
   "maxRunTime": "600s",
   "fuzzTargets": [
-    "fuzz_json_grammar.cpp-d67b8606"
+    "LmNvZGUtaW50ZWxsaWdlbmNlL2Z1enpfdGFyZ2V0cy9mdXp6X2pzb25fZ3JhbW1hci5jcHA="
   ],
   "fuzzerRunConfigurations": [
     {
